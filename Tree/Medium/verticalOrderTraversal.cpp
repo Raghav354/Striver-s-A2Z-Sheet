@@ -1,12 +1,12 @@
 // Tip -: Use vertical line concept and use level to find node at same line.
 
-
 vector<vector<int>> verticalTraversal(TreeNode *root)
 {
     vector<vector<int>> ans;
     if (!root)
         return ans;
 
+    // use multiset when we have to return sorted value if not then use map<int,vector<int>>>.
     map<int, map<int, multiset<int>>> m;
     queue<pair<TreeNode *, pair<int, int>>> q;
     q.push({root, {0, 0}});
